@@ -1,0 +1,23 @@
+{
+  "title": "Preposition edition",
+  "description": "Edit preposition",
+  "type": "object",
+  "properties": {
+    "articleUrl": {
+      "type": "string",
+      "minLength": 1
+    },
+    "originalText": {
+      "type": "string",
+      "minLength": 1
+    },
+    "usersText": {
+      "type": "string",
+      "minLength": 1
+    },
+    "isApproved": {
+      "type": "boolean"
+    }
+  },
+  "required": ["articleUrl", "originalText", "usersText", "isApproved"]
+}

@@ -1,0 +1,49 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+ul {
+  list-style-type: none
+}
+
+.listItem {
+  border: 1px solid black;
+  margin: auto;
+  overflow:hidden;
+  max-width: 1000px;
+  margin: auto;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.title {
+  margin: auto;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  max-width: 1000px;
+}
+
+.blockTitle {
+  color: rgb(23, 162, 184);
+}
+
+.block {
+  margin: 20px;
+}
+
+.sendButton {
+  float: right;
+  margin-bottom: 20px;
+  margin-right: 20px
+}
+
+.nav {
+  margin-bottom: 25px;
+  position: fixed;
+  float: right;
+}
