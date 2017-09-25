@@ -14,9 +14,8 @@ class Results extends Component {
   }
 
   componentDidMount() {
-    let parsed = queryString.parse(this.props.location.search);
     let path = `/api/prepositions?isApproved=false`;
-    let res = axios.get(path).then((res) => {
+    axios.get(path).then((res) => {
       this.setState({
         prepositions: res.data
       });
@@ -36,7 +35,7 @@ class Results extends Component {
     });
     putBody.isApproved = true;
 
-    let res = axios.put(path, putBody).then((res) => {
+    axios.put(path, putBody).then((res) => {
       $(`li#${id}`).remove();
     }).catch((error) => {
       console.error(error);
@@ -47,7 +46,7 @@ class Results extends Component {
     let id = event.target.id;
     let path = `/api/prepositions/${id}`;
 
-    let res = axios.delete(path).then((res) => {
+    axios.delete(path).then((res) => {
       $(`li#${id}`).remove();
     }).catch((error) => {
       console.error(error);

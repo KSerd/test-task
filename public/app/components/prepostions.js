@@ -18,7 +18,7 @@ class Prepositions extends Component {
   componentDidMount() {
     let parsed = queryString.parse(this.props.location.search);
     let path = `/api/article?articleURL=${parsed.articleURL}`;
-    let res = axios.get(path).then((res) => {
+    axios.get(path).then((res) => {
       let tmp = [];
       res.data.pharagraphs.forEach((pharagraph, index) => {
         let obj = {
@@ -50,7 +50,7 @@ class Prepositions extends Component {
       usersText: this.state.pharagraphs[id].usersText
     }
 
-    let res = axios.post(path, postBody).then((res) => {
+    axios.post(path, postBody).then((res) => {
       $(`textarea#${id}`).val('');
     }).catch((error) => {
       console.error(error);
